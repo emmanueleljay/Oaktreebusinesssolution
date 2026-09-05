@@ -154,5 +154,99 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
+
+@utility btn-lime {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--primary);
+  padding: 0.8rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--primary-foreground);
+  transition: all 0.25s ease;
+  box-shadow: 0 12px 30px -14px color-mix(in oklab, var(--primary) 80%, transparent);
+
+  &:hover {
+    background: color-mix(in oklab, var(--primary) 85%, black);
+    transform: translateY(-2px);
+  }
+}
+
+@utility btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--ink);
+  padding: 0.8rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ink);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: var(--ink);
+    color: var(--inverse);
+  }
+}
+
+@utility btn-ghost-inverse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, var(--inverse) 35%, transparent);
+  padding: 0.8rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--inverse);
+  transition: all 0.25s ease;
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+@utility field {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--background);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 30%, transparent);
+  }
+}
+
+@utility bg-hero-veil {
+  background: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--ink) 88%, transparent),
+    color-mix(in oklab, var(--ink) 55%, transparent) 55%,
+    color-mix(in oklab, var(--ink) 30%, transparent)
+  );
+}
+
