@@ -1,15 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Navbar } from "@/components/site/Navbar";
+import { Layout } from "@/components/site/Layout";
 import { Hero } from "@/components/site/Hero";
-import {
-  About,
-  Activities,
-  Contact,
-  CtaBand,
-  Services,
-  WhyOaktree,
-} from "@/components/site/Sections";
-import { Footer } from "@/components/site/Footer";
+import { About, CtaBand, Services } from "@/components/site/Sections";
 
 const title =
   "Oaktree Business Solutions | Project Finance, Real Estate & Business Solutions";
@@ -51,18 +43,11 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground antialiased">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Activities />
-        <WhyOaktree />
-        <CtaBand />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Layout>
+      <Hero />
+      <About />
+      <Services />
+      <CtaBand />
+    </Layout>
   );
 }

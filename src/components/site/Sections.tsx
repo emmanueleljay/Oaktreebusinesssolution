@@ -18,6 +18,7 @@ import {
   TrendingUp,
   type LucideIcon,
 } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import aboutImage from "@/assets/about-oaktree.jpg";
 import { company, pillars, services } from "@/data/site";
 import { Reveal } from "./Reveal";
@@ -86,10 +87,10 @@ export function About() {
               </li>
             ))}
           </ul>
-          <a href="#why" className="btn-outline mt-10">
+          <Link to="/why-oaktree" className="btn-outline mt-10">
             Learn More About Us
             <ArrowRight className="size-4" />
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>
@@ -112,7 +113,7 @@ export function Services() {
             const Icon = icons[s.icon] ?? Landmark;
             return (
               <Reveal key={s.title} delay={i * 60}>
-                <article className="group h-full rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-[0_24px_50px_-30px_rgba(0,0,0,0.4)]">
+                <article id={s.slug} className="group h-full scroll-mt-28 rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-[0_24px_50px_-30px_rgba(0,0,0,0.4)]">
                   <div className="flex items-start justify-between">
                     <Icon className="size-7 stroke-[1.4] text-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-primary-ink" />
                     <span className="font-display text-2xl font-bold text-muted-foreground/35 transition-colors group-hover:text-primary">
@@ -125,10 +126,13 @@ export function Services() {
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {s.description}
                   </p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-ink">
+                  <Link
+                    to="/contact"
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-ink"
+                  >
                     Learn More
                     <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
+                  </Link>
                 </article>
               </Reveal>
             );
@@ -237,13 +241,13 @@ export function CtaBand() {
             into something valuable.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <a href="#contact" className="btn-lime">
+            <Link to="/contact" className="btn-lime">
               Start a Conversation
               <ArrowUpRight className="size-4" />
-            </a>
-            <a href="#services" className="btn-ghost-inverse">
+            </Link>
+            <Link to="/services" className="btn-ghost-inverse">
               Explore Our Services
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>
