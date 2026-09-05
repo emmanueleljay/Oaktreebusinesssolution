@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { navLinks } from "@/data/site";
@@ -32,23 +33,25 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 lg:px-8">
-        <a href="#home" className="flex min-w-0 items-center" aria-label="Oaktree home">
+        <Link to="/" className="flex min-w-0 items-center" aria-label="Oaktree home">
           <Logo />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
           {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.to}
+              to={l.to}
+              activeOptions={{ exact: l.to === "/" }}
+              activeProps={{ className: "text-foreground after:w-full" }}
               className="relative text-sm font-medium tracking-tight text-foreground/75 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:text-foreground hover:after:w-full"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a href="#contact" className="btn-lime">
+          <Link to="/contact" className="btn-lime">
             Let&rsquo;s Talk
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -70,18 +73,20 @@ export function Navbar() {
       >
         <nav className="flex flex-col gap-1 px-5 py-5" aria-label="Mobile">
           {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.to}
+              to={l.to}
               onClick={() => setOpen(false)}
+              activeOptions={{ exact: l.to === "/" }}
+              activeProps={{ className: "text-primary-ink" }}
               className="border-b border-border/70 py-3 font-display text-lg font-semibold tracking-tight text-foreground"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="btn-lime mt-4 justify-center">
+          <Link to="/contact" onClick={() => setOpen(false)} className="btn-lime mt-4 justify-center">
             Let&rsquo;s Talk
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
