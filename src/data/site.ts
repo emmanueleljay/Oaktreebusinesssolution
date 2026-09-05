@@ -81,6 +81,7 @@ export const heroSlides: HeroSlide[] = [
 
 export type Service = {
   number: string;
+  slug: string;
   title: string;
   description: string;
   icon: string;
@@ -90,6 +91,7 @@ export type Service = {
 export const services: Service[] = [
   {
     number: "01",
+    slug: "project-finance",
     title: "Project Finance",
     description:
       "Structuring and connecting viable projects with strategic financing partners and capital pathways.",
@@ -98,6 +100,7 @@ export const services: Service[] = [
   },
   {
     number: "02",
+    slug: "real-estate-development",
     title: "Real Estate Development",
     description:
       "Identifying and developing property opportunities designed for long-term value creation.",
@@ -106,6 +109,7 @@ export const services: Service[] = [
   },
   {
     number: "03",
+    slug: "hospitality",
     title: "Hospitality",
     description:
       "Pursuing opportunities in accommodation, leisure and premium lifestyle developments.",
@@ -114,6 +118,7 @@ export const services: Service[] = [
   },
   {
     number: "04",
+    slug: "oil-gas",
     title: "Oil & Gas",
     description: "Strategic participation in opportunities across the energy value chain.",
     icon: "Fuel",
@@ -121,6 +126,7 @@ export const services: Service[] = [
   },
   {
     number: "05",
+    slug: "financial-trading",
     title: "Financial Trading",
     description:
       "Market-focused trading activity built around disciplined research and opportunity.",
@@ -129,6 +135,7 @@ export const services: Service[] = [
   },
   {
     number: "06",
+    slug: "commodity-trading",
     title: "Commodity Trading",
     description: "Connecting suppliers, buyers and markets across physical commodity flows.",
     icon: "Boxes",
@@ -136,6 +143,7 @@ export const services: Service[] = [
   },
   {
     number: "07",
+    slug: "import-export",
     title: "Import & Export",
     description:
       "Facilitating cross-border trade, logistics coordination and international partnerships.",
@@ -172,13 +180,13 @@ export const pillars = [
 ] as const;
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Our Activities", href: "#activities" },
-  { label: "Why Oaktree", href: "#why" },
-  { label: "Contact", href: "#contact" },
-];
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Our Activities", to: "/activities" },
+  { label: "Why Oaktree", to: "/why-oaktree" },
+  { label: "Contact", to: "/contact" },
+] as const;
 
 export const company = {
   name: "Oaktree Business Solutions",
