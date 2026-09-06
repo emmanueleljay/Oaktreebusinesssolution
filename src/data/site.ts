@@ -100,7 +100,7 @@ export const services: Service[] = [
   },
   {
     number: "02",
-    slug: "real-estate-development",
+    slug: "real-estate",
     title: "Real Estate Development",
     description:
       "Identifying and developing property opportunities designed for long-term value creation.",
