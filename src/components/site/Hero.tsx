@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { heroSlides } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -85,10 +86,10 @@ export function Hero() {
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-inverse/80 sm:text-base">
             {active.description}
           </p>
-          <a href="#services" className="btn-lime mt-8">
+          <Link to="/services" hash={active.id} className="btn-lime mt-8">
             {active.cta}
             <ArrowUpRight className="size-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="mt-10 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-6">
