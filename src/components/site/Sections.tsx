@@ -127,7 +127,8 @@ export function Services() {
                     {s.description}
                   </p>
                   <Link
-                    to="/contact"
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
                     className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-ink"
                   >
                     Learn More
