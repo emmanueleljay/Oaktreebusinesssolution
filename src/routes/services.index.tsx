@@ -7,7 +7,7 @@ const title = "Our Services | Oaktree Business Solutions";
 const description =
   "Project finance, real estate development, hospitality, oil & gas, financial trading, commodity trading and import & export services from Oaktree Business Solutions, Lagos.";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   component: ServicesPage,
   head: () => ({
     meta: [
