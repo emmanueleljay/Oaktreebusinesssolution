@@ -193,3 +193,222 @@ export const company = {
   tagline: "Project Finance | Real Estate Development | Hospitality",
   address: "Lekki/Epe Expressway, Ikate, Lagos, Nigeria",
 };
+
+import africaSkyline from "@/assets/africa-skyline.jpg";
+import africaTeam from "@/assets/africa-team.jpg";
+import africaPort from "@/assets/africa-port.jpg";
+import africaDevelopment from "@/assets/africa-development.jpg";
+
+export const africaGallery = [
+  { src: africaSkyline, alt: "Aerial view of a modern African city skyline at golden hour" },
+  { src: africaTeam, alt: "African business executives meeting in a modern Lagos office" },
+  { src: africaPort, alt: "Containers and cranes at a busy West African seaport" },
+  { src: africaDevelopment, alt: "Tower cranes over a large African property development site" },
+];
+
+export type ServiceDetail = {
+  slug: string;
+  title: string;
+  eyebrow: string;
+  headline: string;
+  intro: string;
+  body: string;
+  offerings: { title: string; description: string }[];
+  approach: string[];
+  stats: { value: string; label: string }[];
+};
+
+export const serviceDetails: ServiceDetail[] = [
+  {
+    slug: "project-finance",
+    title: "Project Finance",
+    eyebrow: "Service 01",
+    headline: "Funding ideas. Building possibilities.",
+    intro:
+      "We structure, package and connect viable projects with financing partners and capital pathways suited to their stage, sector and risk profile.",
+    body:
+      "From early concept to financial close, Oaktree works alongside sponsors to shape a project into something a funder can understand and back. That means disciplined feasibility work, clear financial modelling, credible documentation and the right introductions across our network of institutional and private capital partners in Africa and beyond.",
+    offerings: [
+      { title: "Project Structuring", description: "Shaping ownership, cash flow and security structures that investors can underwrite." },
+      { title: "Feasibility & Modelling", description: "Independent review of assumptions, returns and downside scenarios before capital is committed." },
+      { title: "Capital Raising Support", description: "Preparing information memoranda and introducing projects to suitable funding partners." },
+      { title: "Transaction Advisory", description: "Guidance through negotiation, due diligence and financial close." },
+    ],
+    approach: [
+      "Assess viability with an honest, evidence-led review",
+      "Structure the opportunity around bankable fundamentals",
+      "Match the project to the right class of capital",
+      "Stay engaged through execution and drawdown",
+    ],
+    stats: [
+      { value: "07", label: "Sectors covered" },
+      { value: "360°", label: "Concept to close" },
+      { value: "NG", label: "Lagos based, globally connected" },
+    ],
+  },
+  {
+    slug: "real-estate",
+    title: "Real Estate Development",
+    eyebrow: "Service 02",
+    headline: "Developing spaces. Creating value.",
+    intro:
+      "We identify, structure and develop property opportunities designed for long-term value in fast-growing African urban markets.",
+    body:
+      "Lagos and comparable African cities are expanding quickly, and the projects that endure are the ones planned properly. Oaktree focuses on site selection, development planning and delivery partnerships for residential, commercial and mixed-use schemes, with an emphasis on locations where infrastructure and demand are moving in the same direction.",
+    offerings: [
+      { title: "Site Sourcing & Appraisal", description: "Locating land and assets with genuine development upside and clean title pathways." },
+      { title: "Development Planning", description: "Concept, phasing and cost planning aligned to realistic market demand." },
+      { title: "Delivery Partnerships", description: "Working with contractors, consultants and co-investors through construction." },
+      { title: "Asset Positioning", description: "Sales, leasing and repositioning strategies that protect long-term value." },
+    ],
+    approach: [
+      "Start with the location and the demand behind it",
+      "Plan phases that can be funded and delivered",
+      "Partner with proven delivery teams",
+      "Hold value through quality, not shortcuts",
+    ],
+    stats: [
+      { value: "Mixed", label: "Residential, commercial, mixed-use" },
+      { value: "Lagos", label: "Core development market" },
+      { value: "Long", label: "Long-term value focus" },
+    ],
+  },
+  {
+    slug: "hospitality",
+    title: "Hospitality",
+    eyebrow: "Service 03",
+    headline: "Creating experiences that matter.",
+    intro:
+      "We pursue opportunities across accommodation, leisure and premium lifestyle developments serving Africa's growing travel and business economy.",
+    body:
+      "Hospitality succeeds where service, design and operations meet commercial discipline. Oaktree explores hotel, serviced apartment and lifestyle opportunities, working with operators and partners to shape properties that guests return to and that perform for their owners.",
+    offerings: [
+      { title: "Concept Development", description: "Defining the guest proposition, positioning and service standard." },
+      { title: "Operator Partnerships", description: "Identifying and structuring arrangements with capable operators." },
+      { title: "Investment Structuring", description: "Aligning capital, returns and operating economics from the outset." },
+      { title: "Lifestyle Projects", description: "Leisure, dining and premium lifestyle offerings tied to the wider development." },
+    ],
+    approach: [
+      "Understand the guest before designing the building",
+      "Match the concept to a credible operating model",
+      "Build operational discipline into the plan",
+      "Measure performance, not just occupancy",
+    ],
+    stats: [
+      { value: "Premium", label: "Positioning focus" },
+      { value: "Guest", label: "Experience led" },
+      { value: "Growth", label: "Africa travel economy" },
+    ],
+  },
+  {
+    slug: "oil-gas",
+    title: "Oil & Gas",
+    eyebrow: "Service 04",
+    headline: "Connecting opportunity with energy.",
+    intro:
+      "We participate strategically in opportunities across the oil and gas value chain, from supply and services to trading-linked arrangements.",
+    body:
+      "Energy remains central to the African economy. Oaktree engages selectively across the value chain, working with established partners and prioritising transactions that are transparent, compliant and commercially sound. Our role is to connect credible counterparties and structure participation that manages risk properly.",
+    offerings: [
+      { title: "Supply Arrangements", description: "Structured product supply and offtake linkages with verified counterparties." },
+      { title: "Service Partnerships", description: "Collaboration with technical and logistics providers across the chain." },
+      { title: "Opportunity Origination", description: "Identifying and screening participation opportunities in the sector." },
+      { title: "Compliance & Risk Review", description: "Documentation, counterparty checks and risk assessment before commitment." },
+    ],
+    approach: [
+      "Verify counterparties before anything else",
+      "Structure transactions with clear documentation",
+      "Manage exposure deliberately, not optimistically",
+      "Work with partners who bring real technical capability",
+    ],
+    stats: [
+      { value: "Chain", label: "Across the value chain" },
+      { value: "Checked", label: "Counterparty verification" },
+      { value: "Africa", label: "Regional focus" },
+    ],
+  },
+  {
+    slug: "financial-trading",
+    title: "Financial Trading",
+    eyebrow: "Service 05",
+    headline: "Navigating markets. Unlocking opportunities.",
+    intro:
+      "Market-focused trading activity built around disciplined research, defined risk limits and a long-term view of capital.",
+    body:
+      "Oaktree approaches financial markets the way it approaches every other sector: with research, structure and restraint. Positions are taken on the basis of analysis rather than sentiment, sized within clear limits and reviewed continuously as conditions change.",
+    offerings: [
+      { title: "Market Research", description: "Macro and sector analysis that informs every position taken." },
+      { title: "Strategy Execution", description: "Disciplined execution within pre-agreed mandates and limits." },
+      { title: "Risk Management", description: "Exposure limits, monitoring and review as part of daily practice." },
+      { title: "Portfolio Review", description: "Regular assessment of performance against objectives." },
+    ],
+    approach: [
+      "Research first, position second",
+      "Size every position against defined limits",
+      "Review continuously as markets move",
+      "Protect capital before chasing return",
+    ],
+    stats: [
+      { value: "Data", label: "Research driven" },
+      { value: "Limits", label: "Defined risk framework" },
+      { value: "Daily", label: "Continuous review" },
+    ],
+  },
+  {
+    slug: "commodity-trading",
+    title: "Commodity Trading",
+    eyebrow: "Service 06",
+    headline: "Connecting markets. Moving value.",
+    intro:
+      "We connect suppliers, buyers and markets across physical commodity flows, with logistics and documentation handled properly end to end.",
+    body:
+      "Physical trade works when sourcing, inspection, logistics and payment terms all line up. Oaktree coordinates those moving parts across agricultural and industrial commodities, drawing on relationships with producers, inspection agents, freight partners and buyers in African and international markets.",
+    offerings: [
+      { title: "Sourcing & Aggregation", description: "Working with producers and suppliers to secure verified volumes." },
+      { title: "Quality & Inspection", description: "Independent inspection and certification before shipment." },
+      { title: "Logistics Coordination", description: "Inland transport, port handling and freight scheduling." },
+      { title: "Trade Documentation", description: "Contracts, payment instruments and shipping paperwork managed carefully." },
+    ],
+    approach: [
+      "Verify product and supplier at source",
+      "Inspect before shipment, every time",
+      "Plan logistics ahead of the contract, not after",
+      "Keep documentation clean and traceable",
+    ],
+    stats: [
+      { value: "Physical", label: "Real goods, real flows" },
+      { value: "Port", label: "Sea and inland logistics" },
+      { value: "Global", label: "African and international buyers" },
+    ],
+  },
+  {
+    slug: "import-export",
+    title: "Import & Export",
+    eyebrow: "Service 07",
+    headline: "Bridging markets across borders.",
+    intro:
+      "We facilitate cross-border trade, logistics coordination and international partnerships between African and global markets.",
+    body:
+      "Cross-border trade rewards partners who understand both ends of the route. Oaktree supports importers and exporters with sourcing, freight, customs coordination and partner introductions, so goods move on schedule and obligations are met on both sides.",
+    offerings: [
+      { title: "Supplier Sourcing", description: "Identifying and vetting suppliers in international markets." },
+      { title: "Freight & Customs", description: "Coordinating shipping, clearing and regulatory requirements." },
+      { title: "Trade Finance Support", description: "Structuring payment and documentary credit arrangements with partners." },
+      { title: "Partnership Development", description: "Building durable relationships between African and global counterparties." },
+    ],
+    approach: [
+      "Understand both markets before quoting a route",
+      "Vet every supplier and buyer",
+      "Plan clearance and compliance early",
+      "Deliver on schedule and on paper",
+    ],
+    stats: [
+      { value: "Borders", label: "Cross-border expertise" },
+      { value: "Ports", label: "Sea and air freight" },
+      { value: "Partners", label: "Vetted global network" },
+    ],
+  },
+];
+
+export const getServiceDetail = (slug: string) =>
+  serviceDetails.find((d) => d.slug === slug);
