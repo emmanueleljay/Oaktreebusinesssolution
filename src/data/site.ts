@@ -184,6 +184,8 @@ export const navLinks = [
   { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Our Activities", to: "/activities" },
+  { label: "Projects", to: "/projects" },
+
   { label: "Why Oaktree", to: "/why-oaktree" },
   { label: "Contact", to: "/contact" },
 ] as const;
