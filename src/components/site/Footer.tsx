@@ -6,6 +6,8 @@ const companyLinks = [
   { label: "About Us", to: "/about" as const },
   { label: "Our Services", to: "/services" as const },
   { label: "Our Activities", to: "/activities" as const },
+  { label: "Completed Projects", to: "/projects" as const },
+
   { label: "Why Oaktree", to: "/why-oaktree" as const },
   { label: "Contact", to: "/contact" as const },
 ];

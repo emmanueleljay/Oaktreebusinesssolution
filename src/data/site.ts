@@ -184,6 +184,8 @@ export const navLinks = [
   { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Our Activities", to: "/activities" },
+  { label: "Projects", to: "/projects" },
+
   { label: "Why Oaktree", to: "/why-oaktree" },
   { label: "Contact", to: "/contact" },
 ] as const;
@@ -412,3 +414,121 @@ export const serviceDetails: ServiceDetail[] = [
 
 export const getServiceDetail = (slug: string) =>
   serviceDetails.find((d) => d.slug === slug);
+
+import ahmoduTijani from "@/assets/ahmodu-tijani.jpg.asset.json";
+import ikejaGraTerraces from "@/assets/ikeja-gra-terraces.jpg.asset.json";
+import lekkiPhase1 from "@/assets/lekki-phase-1.jpg.asset.json";
+import ikejaGraEstate from "@/assets/ikeja-gra-estate.jpg.asset.json";
+import ikejaGraBlock from "@/assets/ikeja-gra-block.jpg.asset.json";
+import ikejaGraAerial from "@/assets/ikeja-gra-aerial.jpg.asset.json";
+
+export type Project = {
+  slug: string;
+  name: string;
+  location: string;
+  type: string;
+  status: string;
+  summary: string;
+  highlights: string[];
+  image: string;
+  alt: string;
+};
+
+export const projects: Project[] = [
+  {
+    slug: "ahmodu-tijani-vi",
+    name: "Ahmodu Tijani, Victoria Island",
+    location: "Victoria Island, Lagos",
+    type: "Multi-storey residential development",
+    status: "Completed",
+    summary:
+      "A multi-storey residential building on Ahmodu Tijani Close in the heart of Victoria Island, delivered through the full construction cycle from substructure to finishing.",
+    highlights: [
+      "Reinforced concrete frame across multiple floors",
+      "Tower crane logistics on a tight island site",
+      "Coordinated structural, mechanical and electrical delivery",
+    ],
+    image: ahmoduTijani.url,
+    alt: "Multi-storey residential building under construction with a tower crane at Ahmodu Tijani, Victoria Island",
+  },
+  {
+    slug: "ikeja-gra-terraces",
+    name: "Ikeja GRA Terraces",
+    location: "Ikeja GRA, Lagos",
+    type: "Terraced homes",
+    status: "Completed",
+    summary:
+      "Contemporary terraced homes in Ikeja GRA, finished in a warm brick and cream palette with private parking and secure access.",
+    highlights: [
+      "Clean contemporary elevations",
+      "Private driveway and secure gated access",
+      "Handed over fully finished",
+    ],
+    image: ikejaGraTerraces.url,
+    alt: "Completed terraced homes with brick and cream finishes in Ikeja GRA, Lagos",
+  },
+  {
+    slug: "lekki-phase-1",
+    name: "Lekki Phase 1 Development",
+    location: "Lekki Phase 1, Lagos",
+    type: "Residential development",
+    status: "Completed",
+    summary:
+      "A residential development in Lekki Phase 1 delivered by an in-house and partner site team working to programme and to specification.",
+    highlights: [
+      "Experienced site supervision team",
+      "Strict site safety standards",
+      "Curved balcony architecture and quality external finishes",
+    ],
+    image: lekkiPhase1.url,
+    alt: "Project team in safety gear on site at the Lekki Phase 1 development in Lagos",
+  },
+  {
+    slug: "ikeja-gra-estate",
+    name: "Ikeja GRA Estate",
+    location: "Ikeja GRA, Lagos",
+    type: "Apartment estate",
+    status: "Completed",
+    summary:
+      "An estate of low-rise apartment blocks in Ikeja GRA arranged around landscaped shared grounds and generous resident parking.",
+    highlights: [
+      "Multiple low-rise apartment blocks",
+      "Landscaped communal grounds",
+      "Ample on-site resident parking",
+    ],
+    image: ikejaGraEstate.url,
+    alt: "Completed low-rise apartment blocks with parking at an estate in Ikeja GRA, Lagos",
+  },
+  {
+    slug: "ikeja-gra-apartments",
+    name: "Ikeja GRA Apartments",
+    location: "Ikeja GRA, Lagos",
+    type: "Apartment block",
+    status: "Completed",
+    summary:
+      "A three-storey apartment block with balconied units, delivered to a durable external finish suited to the Lagos climate.",
+    highlights: [
+      "Balconied units on every floor",
+      "Durable weather-resistant external finish",
+      "Delivered ready for occupation",
+    ],
+    image: ikejaGraBlock.url,
+    alt: "Three-storey apartment block with balconies in Ikeja GRA, Lagos",
+  },
+  {
+    slug: "ikeja-gra-aerial",
+    name: "Ikeja GRA Residences",
+    location: "Ikeja GRA, Lagos",
+    type: "Residential scheme",
+    status: "Completed",
+    summary:
+      "A completed residential scheme in Ikeja GRA, seen from above: repeated blocks, planned circulation and organised parking across the site.",
+    highlights: [
+      "Master-planned site layout",
+      "Organised internal roads and parking",
+      "Consistent architecture across blocks",
+    ],
+    image: ikejaGraAerial.url,
+    alt: "Aerial view of a completed residential scheme with parking courts in Ikeja GRA, Lagos",
+  },
+];

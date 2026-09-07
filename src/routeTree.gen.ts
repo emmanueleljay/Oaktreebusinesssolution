@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ActivitiesRouteImport } from './routes/activities'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as WhyOaktreeRouteImport } from './routes/why-oaktree'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
@@ -37,6 +38,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WhyOaktreeRoute = WhyOaktreeRouteImport.update({
   id: '/why-oaktree',
   path: '/why-oaktree',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/activities': typeof ActivitiesRoute
   '/contact': typeof ContactRoute
+  '/projects': typeof ProjectsRoute
   '/why-oaktree': typeof WhyOaktreeRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services/': typeof ServicesIndexRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/activities': typeof ActivitiesRoute
   '/contact': typeof ContactRoute
+  '/projects': typeof ProjectsRoute
   '/why-oaktree': typeof WhyOaktreeRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services': typeof ServicesIndexRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/activities': typeof ActivitiesRoute
   '/contact': typeof ContactRoute
+  '/projects': typeof ProjectsRoute
   '/why-oaktree': typeof WhyOaktreeRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/services/': typeof ServicesIndexRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/activities'
     | '/contact'
+    | '/projects'
     | '/why-oaktree'
     | '/services/$slug'
     | '/services/'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/activities'
     | '/contact'
+    | '/projects'
     | '/why-oaktree'
     | '/services/$slug'
     | '/services'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/activities'
     | '/contact'
+    | '/projects'
     | '/why-oaktree'
     | '/services/$slug'
     | '/services/'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ActivitiesRoute: typeof ActivitiesRoute
   ContactRoute: typeof ContactRoute
+  ProjectsRoute: typeof ProjectsRoute
   WhyOaktreeRoute: typeof WhyOaktreeRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/why-oaktree': {
       id: '/why-oaktree'
       path: '/why-oaktree'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ActivitiesRoute: ActivitiesRoute,
   ContactRoute: ContactRoute,
+  ProjectsRoute: ProjectsRoute,
   WhyOaktreeRoute: WhyOaktreeRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   ServicesIndexRoute: ServicesIndexRoute,
