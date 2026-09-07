@@ -102,8 +102,8 @@ function ServiceDetailPage() {
           <Reveal delay={100} className="relative">
             <div className="overflow-hidden rounded-[2rem]">
               <img
-                src={africaGallery[1].src}
-                alt={africaGallery[1].alt}
+                src={africaGallery[1]!.src}
+                alt={africaGallery[1]!.alt}
                 width={1600}
                 height={1000}
                 loading="lazy"

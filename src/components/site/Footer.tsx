@@ -50,8 +50,8 @@ export function Footer() {
             {services.map((s) => (
               <li key={s.title}>
                 <Link
-                  to="/services"
-                  hash={s.slug}
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
                   className="text-sm text-inverse/70 transition-colors hover:text-primary"
                 >
                   {s.title}
