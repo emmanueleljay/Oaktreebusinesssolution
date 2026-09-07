@@ -86,7 +86,11 @@ export function Hero() {
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-inverse/80 sm:text-base">
             {active.description}
           </p>
-          <Link to="/services" hash={active.id} className="btn-lime mt-8">
+          <Link
+            to="/services/$slug"
+            params={{ slug: active.id }}
+            className="btn-lime mt-8"
+          >
             {active.cta}
             <ArrowUpRight className="size-4" />
           </Link>
