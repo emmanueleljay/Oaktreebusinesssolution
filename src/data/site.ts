@@ -185,12 +185,24 @@ export const navLinks = [
     label: "About Us",
     to: "/about",
     children: [
-      { label: "Team", to: "/team" },
-      { label: "Our Activities", to: "/activities" },
-      { label: "Why Oaktree", to: "/why-oaktree" },
+      { label: "Team", to: "/team", params: {} },
+      { label: "Our Activities", to: "/activities", params: {} },
+      { label: "Why Oaktree", to: "/why-oaktree", params: {} },
     ],
   },
-  { label: "Services", to: "/services" },
+  {
+    label: "Services",
+    to: "/services",
+    children: [
+      { label: "Project Finance", to: "/services/$slug", params: { slug: "project-finance" } },
+      { label: "Real Estate Development", to: "/services/$slug", params: { slug: "real-estate" } },
+      { label: "Hospitality", to: "/services/$slug", params: { slug: "hospitality" } },
+      { label: "Oil & Gas", to: "/services/$slug", params: { slug: "oil-gas" } },
+      { label: "Financial Trading", to: "/services/$slug", params: { slug: "financial-trading" } },
+      { label: "Commodity Trading", to: "/services/$slug", params: { slug: "commodity-trading" } },
+      { label: "Import & Export", to: "/services/$slug", params: { slug: "import-export" } },
+    ],
+  },
   { label: "Projects", to: "/projects" },
   { label: "Contact", to: "/contact" },
 ] as const;
