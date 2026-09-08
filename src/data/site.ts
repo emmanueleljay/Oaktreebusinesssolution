@@ -179,13 +179,7 @@ export const pillars = [
   },
 ] as const;
 
-export type NavLink = {
-  label: string;
-  to: string;
-  children?: { label: string; to: string }[];
-};
-
-export const navLinks: NavLink[] = [
+export const navLinks = [
   { label: "Home", to: "/" },
   {
     label: "About Us",
@@ -199,7 +193,8 @@ export const navLinks: NavLink[] = [
   { label: "Services", to: "/services" },
   { label: "Projects", to: "/projects" },
   { label: "Contact", to: "/contact" },
-];
+] as const;
+
 
 
 export const company = {
