@@ -270,6 +270,11 @@ const fields = [
   { id: "subject", label: "Subject", type: "text", autoComplete: "off", required: true },
 ];
 
+const serviceOptions = [
+  { value: "", label: "Select a service" },
+  ...services.map((s) => ({ value: s.slug, label: s.title })),
+];
+
 export function Contact() {
   return (
     <section id="contact" className="bg-surface py-20 sm:py-28">
