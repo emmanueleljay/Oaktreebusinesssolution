@@ -503,12 +503,12 @@ export const serviceDetails: ServiceDetail[] = [
 export const getServiceDetail = (slug: string) =>
   serviceDetails.find((d) => d.slug === slug);
 
-import ahmoduTijani from "@/assets/ahmodu-tijani-victoria-island.jpg.asset.json";
-import ikejaGraTerraces from "@/assets/ikeja-gra-terraces-new.jpg.asset.json";
-import lekkiPhase1 from "@/assets/lekki-phase-1-development.jpg.asset.json";
-import ikejaGraEstate from "@/assets/ikeja-gra-estate-new.jpg.asset.json";
-import ikejaGraApartments from "@/assets/ikeja-gra-apartments.jpg.asset.json";
-import ikejaGraResidences from "@/assets/ikeja-gra-residences.jpg.asset.json";
+import ahmoduTijani from "@/assets/ahmodu-tijani-victoria-island.jpg";
+import ikejaGraTerraces from "@/assets/ikeja-gra-terraces-new.jpg";
+import lekkiPhase1 from "@/assets/lekki-phase-1-development.jpg";
+import ikejaGraEstate from "@/assets/ikeja-gra-estate-new.jpg";
+import ikejaGraApartments from "@/assets/ikeja-gra-apartments.jpg";
+import ikejaGraResidences from "@/assets/ikeja-gra-residences.jpg";
 
 export type Project = {
   slug: string;
@@ -536,7 +536,7 @@ export const projects: Project[] = [
       "Tower crane logistics on a tight island site",
       "Coordinated structural, mechanical and electrical delivery",
     ],
-    image: ahmoduTijani.url,
+    image: ahmoduTijani,
     alt: "Multi-storey residential building under construction with a tower crane at Ahmodu Tijani, Victoria Island",
   },
   {
@@ -552,7 +552,7 @@ export const projects: Project[] = [
       "Private driveway and secure gated access",
       "Handed over fully finished",
     ],
-    image: ikejaGraTerraces.url,
+    image: ikejaGraTerraces,
     alt: "Completed terraced homes with brick and cream finishes in Ikeja GRA, Lagos",
   },
   {
@@ -568,7 +568,7 @@ export const projects: Project[] = [
       "Strict site safety standards",
       "Curved balcony architecture and quality external finishes",
     ],
-    image: lekkiPhase1.url,
+    image: lekkiPhase1,
     alt: "Project team in safety gear on site at the Lekki Phase 1 development in Lagos",
   },
   {
@@ -584,7 +584,7 @@ export const projects: Project[] = [
       "Landscaped communal grounds",
       "Ample on-site resident parking",
     ],
-    image: ikejaGraEstate.url,
+    image: ikejaGraEstate,
     alt: "Completed low-rise apartment blocks with parking at an estate in Ikeja GRA, Lagos",
   },
   {
@@ -600,7 +600,7 @@ export const projects: Project[] = [
       "Durable weather-resistant external finish",
       "Delivered ready for occupation",
     ],
-    image: ikejaGraApartments.url,
+    image: ikejaGraApartments,
     alt: "Three-storey apartment block with balconies in Ikeja GRA, Lagos",
   },
   {
@@ -616,16 +616,16 @@ export const projects: Project[] = [
       "Organised internal roads and parking",
       "Consistent architecture across blocks",
     ],
-    image: ikejaGraResidences.url,
+    image: ikejaGraResidences,
     alt: "Aerial view of a completed residential scheme with parking courts in Ikeja GRA, Lagos",
   },
 ];
 
-import davidSokoya from "@/assets/david-sokoya.jpg.asset.json";
-import michealHovarth from "@/assets/micheal-hovarth.jpg.asset.json";
-import elizabethEtete from "@/assets/elizabeth-etete.jpg.asset.json";
-import fataiYusuf from "@/assets/fatai-yusuf.jpg.asset.json";
-import dexterKackus from "@/assets/dexter-kackus.jpg.asset.json";
+import davidSokoya from "@/assets/david-sokoya.jpg";
+import michealHovarth from "@/assets/micheal-hovarth.jpg";
+import elizabethEtete from "@/assets/elizabeth-etete.jpg";
+import fataiYusuf from "@/assets/fatai-yusuf.jpg";
+import dexterKackus from "@/assets/dexter-kackus.jpg";
 
 export type TeamMember = {
   slug: string;
@@ -645,7 +645,7 @@ export const team: TeamMember[] = [
     name: "David Olayinka Sokoya",
     role: "Group Managing Director",
     bio: "David Olayinka Olutayo Sokoya is currently serving as the Group Managing Director of Northfield Resource Management Limited. He holds a double degree in Estate Management and Law, is a member of several professional bodies, and has well over 17 years of professional and business experience.",
-    image: davidSokoya.url,
+    image: davidSokoya,
     alt: "Portrait of David Olayinka Sokoya, Group Managing Director",
   },
   {
@@ -653,7 +653,7 @@ export const team: TeamMember[] = [
     name: "Micheal Hovarth",
     role: "Executive Director, International Operations",
     bio: "A citizen and resident of the United States of America, Micheal handles business transactions across the USA and European countries. With BSc and MSc degrees in Economics and over 20 years of experience in exportation, he runs our international operations from our Florida office.",
-    image: michealHovarth.url,
+    image: michealHovarth,
     alt: "Portrait of Micheal Hovarth, Executive Director of International Operations",
   },
   {
@@ -661,7 +661,7 @@ export const team: TeamMember[] = [
     name: "Elizabeth Etete",
     role: "Director",
     bio: "Elizabeth holds a degree in Mechanical and Aerospace Engineering with over 25 years of experience in executive management and ten years in procurement. Versatile and widely travelled, she has lived across Africa, Europe and America and is fluent in German, English and French. She is a director at Northfield Resource Management Limited and MD of Crown Lotus Boutique Hotels.",
-    image: elizabethEtete.url,
+    image: elizabethEtete,
     alt: "Portrait of Elizabeth Etete, Director",
   },
   {
@@ -669,7 +669,7 @@ export const team: TeamMember[] = [
     name: "Fatai M. B. Yusuf",
     role: "General Manager, Administration",
     bio: "A graduate of Urban and Regional Planning and a member of the Nigerian Institute of Management, Fatai is General Manager, Administration and also COO of Greg Foods and Farms Limited. He has served the company diligently since inception.",
-    image: fataiYusuf.url,
+    image: fataiYusuf,
     alt: "Portrait of Fatai M. B. Yusuf, General Manager of Administration",
   },
   {
@@ -677,7 +677,7 @@ export const team: TeamMember[] = [
     name: "Dexter Martin Kackus",
     role: "International Executive Director",
     bio: "Resident in the United States of America, Dexter handles business transactions across the US and European countries covering crude oil, refineries, tanker vessels and international trading. He brings over 25 years of experience in Civil Engineering, AutoCAD, database and system administration, and runs international operations from our Florida office.",
-    image: dexterKackus.url,
+    image: dexterKackus,
     alt: "Portrait of Dexter Martin Kackus, International Executive Director",
   },
 ];
