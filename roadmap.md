@@ -1,2 +1,2 @@
-- [ ] Fix all preview typecheck errors introduced by the Services dropdown.
-- [ ] Verify the production build and latest preview build status.
+- [x] Fix all preview typecheck errors introduced by the Services dropdown.
+- [x] Verify the production build and latest preview build status.
