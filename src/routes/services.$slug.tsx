@@ -57,7 +57,8 @@ function ServiceNotFound() {
 
 function ServiceDetailPage() {
   const { detail } = Route.useLoaderData();
-  const service = services.find((s) => s.slug === detail.slug)!;
+  const service = services.find((s) => s.slug === detail.slug);
+  if (!service) return <ServiceNotFound />;
   const others = serviceDetails.filter((d) => d.slug !== detail.slug).slice(0, 3);
 
   return (
@@ -102,8 +103,8 @@ function ServiceDetailPage() {
           <Reveal delay={100} className="relative">
             <div className="overflow-hidden rounded-[2rem]">
               <img
-                src={africaGallery[1]!.src}
-                alt={africaGallery[1]!.alt}
+                src={service.image}
+                alt={`${detail.title} operations in Africa`}
                 width={1600}
                 height={1000}
                 loading="lazy"
