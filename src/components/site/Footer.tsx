@@ -22,7 +22,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-[1.3fr_repeat(3,minmax(0,1fr))] lg:px-8">
         <div>
           <div className="inline-block rounded-xl bg-white px-4 py-3">
-            <Logo className="h-12" />
+            <Logo className="h-20 sm:h-24" />
           </div>
           <p className="mt-5 text-sm text-inverse/70">{company.tagline}</p>
           <p className="mt-4 max-w-xs text-sm text-inverse/50">{company.address}</p>
