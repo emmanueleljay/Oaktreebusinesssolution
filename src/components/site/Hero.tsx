@@ -45,7 +45,7 @@ export function Hero() {
     <section
       id="home"
       aria-label="Oaktree service highlights"
-      className="relative h-[78vh] min-h-[560px] w-full overflow-hidden bg-ink text-inverse md:h-[88vh]"
+      className="relative flex min-h-[620px] w-full overflow-hidden bg-ink text-inverse md:min-h-[680px] md:h-[88vh] md:max-h-[1000px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
