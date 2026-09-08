@@ -44,13 +44,14 @@ export function Navbar() {
               <div key={l.to} className="group relative">
                 <Link
                   to={l.to}
+                  aria-haspopup="menu"
                   activeProps={{ className: "text-foreground after:w-full" }}
                   className="relative flex items-center gap-1 text-sm font-medium tracking-tight text-foreground/75 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:text-foreground hover:after:w-full"
                 >
                   {l.label}
                   <ChevronDown className="size-4 transition-transform duration-300 group-hover:rotate-180" />
                 </Link>
-                <div className="invisible absolute left-0 top-full w-56 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <div className="invisible absolute left-0 top-full w-64 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="overflow-hidden rounded-2xl border border-border bg-background p-2 shadow-[0_24px_50px_-30px_rgba(0,0,0,0.5)]">
                     {l.children.map((c) => (
                       <Link
@@ -133,7 +134,7 @@ export function Navbar() {
                 <div
                   className={cn(
                     "overflow-hidden transition-[max-height,opacity] duration-300",
-                    openGroup === l.to ? "max-h-64 opacity-100" : "max-h-0 opacity-0",
+                    openGroup === l.to ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
                   )}
                 >
                   <div className="flex flex-col pb-3 pl-4">
