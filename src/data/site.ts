@@ -185,9 +185,9 @@ export const navLinks = [
     label: "About Us",
     to: "/about",
     children: [
-      { label: "Team", to: "/team" },
-      { label: "Our Activities", to: "/activities" },
-      { label: "Why Oaktree", to: "/why-oaktree" },
+      { label: "Team", to: "/team", params: {} },
+      { label: "Our Activities", to: "/activities", params: {} },
+      { label: "Why Oaktree", to: "/why-oaktree", params: {} },
     ],
   },
   {
