@@ -45,7 +45,7 @@ export function Hero() {
     <section
       id="home"
       aria-label="Oaktree service highlights"
-      className="relative h-[78vh] min-h-[560px] w-full overflow-hidden bg-ink text-inverse md:h-[88vh]"
+      className="relative flex min-h-[620px] w-full overflow-hidden bg-ink text-inverse md:min-h-[680px] md:h-[88vh] md:max-h-[1000px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -74,13 +74,13 @@ export function Hero() {
         </div>
       ))}
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-5 pb-28 pt-36 sm:pb-32 sm:pt-40 lg:px-8 lg:pt-44">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-center px-5 pb-16 pt-28 sm:pb-20 sm:pt-32 lg:px-8 lg:pt-36">
         <div key={active.id} className="max-w-4xl animate-fade-in xl:max-w-5xl">
           <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.32em] text-primary">
             <span className="h-px w-8 bg-primary" />
             {active.label}
           </p>
-          <h1 className="mt-5 font-display text-[2.1rem] font-bold leading-[1.08] tracking-tight text-inverse sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
+          <h1 className="mt-5 font-display text-[2.1rem] font-bold leading-[1.08] tracking-tight text-inverse sm:text-5xl lg:text-[3rem] xl:text-6xl">
             {active.headline}
           </h1>
           <p className="mt-5 max-w-3xl text-sm leading-relaxed text-inverse/80 sm:text-base lg:text-lg">
