@@ -203,6 +203,87 @@ export const company = {
   address: "Lekki/Epe Expressway, Ikate, Lagos, Nigeria",
 };
 
+import missionImage from "@/assets/mission.jpg";
+import visionImage from "@/assets/vision.jpg";
+import valuesImage from "@/assets/values.jpg";
+
+export const purpose = [
+  {
+    key: "mission",
+    eyebrow: "Our Mission",
+    title: "To create sustainable value across every sector we touch.",
+    description:
+      "We identify credible opportunities, structure them properly and deliver them with partners who share our standards — turning ideas in project finance, real estate, hospitality, energy and trade into businesses that last.",
+    points: [
+      "Structure opportunities that stand up to scrutiny",
+      "Deliver projects that outlive the transaction",
+      "Put partnership and integrity ahead of quick wins",
+    ],
+    image: missionImage,
+    alt: "Oaktree executives reviewing a strategy plan in a Lagos boardroom",
+  },
+  {
+    key: "vision",
+    eyebrow: "Our Vision",
+    title: "To be Africa's most trusted diversified business solutions company.",
+    description:
+      "We are building a company that global partners look to first when they want to invest, build or trade in Nigeria and across the continent — known for judgement, discipline and results.",
+    points: [
+      "A trusted gateway into African markets",
+      "Excellence across every sector we operate in",
+      "Long-term growth that benefits our communities",
+    ],
+    image: visionImage,
+    alt: "African business leaders looking out over a city skyline at sunset",
+  },
+] as const;
+
+export const coreValues = [
+  {
+    number: "01",
+    title: "Integrity",
+    description: "We do what we say. Every commitment we make is one we intend to keep.",
+    icon: "ShieldCheck",
+  },
+  {
+    number: "02",
+    title: "Excellence",
+    description: "We hold every project, partnership and process to a high standard.",
+    icon: "Award",
+  },
+  {
+    number: "03",
+    title: "Partnership",
+    description: "We grow by building relationships that create value on both sides.",
+    icon: "Handshake",
+  },
+  {
+    number: "04",
+    title: "Innovation",
+    description: "We look for smarter structures and better routes to the same goal.",
+    icon: "Lightbulb",
+  },
+  {
+    number: "05",
+    title: "Accountability",
+    description: "We take ownership of outcomes, not just of effort.",
+    icon: "Target",
+  },
+  {
+    number: "06",
+    title: "Impact",
+    description: "We measure success by the lasting value we leave behind.",
+    icon: "Sprout",
+  },
+] as const;
+
+export const valuesImageAsset = {
+  src: valuesImage,
+  alt: "Oaktree team shaking hands with partners in a modern African office",
+};
+
+
+
 import africaSkyline from "@/assets/africa-skyline.jpg";
 import africaTeam from "@/assets/africa-team.jpg";
 import africaPort from "@/assets/africa-port.jpg";
