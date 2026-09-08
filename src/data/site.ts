@@ -503,12 +503,12 @@ export const serviceDetails: ServiceDetail[] = [
 export const getServiceDetail = (slug: string) =>
   serviceDetails.find((d) => d.slug === slug);
 
-import ahmoduTijani from "@/assets/ahmodu-tijani.jpg.asset.json";
-import ikejaGraTerraces from "@/assets/ikeja-gra-terraces.jpg.asset.json";
-import lekkiPhase1 from "@/assets/lekki-phase-1.jpg.asset.json";
-import ikejaGraEstate from "@/assets/ikeja-gra-estate.jpg.asset.json";
-import ikejaGraBlock from "@/assets/ikeja-gra-block.jpg.asset.json";
-import ikejaGraAerial from "@/assets/ikeja-gra-aerial.jpg.asset.json";
+import ahmoduTijani from "@/assets/ahmodu-tijani-victoria-island.jpg.asset.json";
+import ikejaGraTerraces from "@/assets/ikeja-gra-terraces-new.jpg.asset.json";
+import lekkiPhase1 from "@/assets/lekki-phase-1-development.jpg.asset.json";
+import ikejaGraEstate from "@/assets/ikeja-gra-estate-new.jpg.asset.json";
+import ikejaGraApartments from "@/assets/ikeja-gra-apartments.jpg.asset.json";
+import ikejaGraResidences from "@/assets/ikeja-gra-residences.jpg.asset.json";
 
 export type Project = {
   slug: string;
@@ -600,7 +600,7 @@ export const projects: Project[] = [
       "Durable weather-resistant external finish",
       "Delivered ready for occupation",
     ],
-    image: ikejaGraBlock.url,
+    image: ikejaGraApartments.url,
     alt: "Three-storey apartment block with balconies in Ikeja GRA, Lagos",
   },
   {
@@ -616,7 +616,7 @@ export const projects: Project[] = [
       "Organised internal roads and parking",
       "Consistent architecture across blocks",
     ],
-    image: ikejaGraAerial.url,
+    image: ikejaGraResidences.url,
     alt: "Aerial view of a completed residential scheme with parking courts in Ikeja GRA, Lagos",
   },
 ];
