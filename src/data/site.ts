@@ -532,3 +532,64 @@ export const projects: Project[] = [
     alt: "Aerial view of a completed residential scheme with parking courts in Ikeja GRA, Lagos",
   },
 ];
+
+import davidSokoya from "@/assets/david-sokoya.jpg.asset.json";
+import michealHovarth from "@/assets/micheal-hovarth.jpg.asset.json";
+import elizabethEtete from "@/assets/elizabeth-etete.jpg.asset.json";
+import fataiYusuf from "@/assets/fatai-yusuf.jpg.asset.json";
+import dexterKackus from "@/assets/dexter-kackus.jpg.asset.json";
+
+export type TeamMember = {
+  slug: string;
+  name: string;
+  role: string;
+  bio: string;
+  image: string;
+  alt: string;
+};
+
+export const teamIntro =
+  "Our management team is made up of seasoned professionals and experts from various fields and disciplines with an orientation that reflects consistent improvement. The team is made up of business technocrats with an average of over 30 years professional experience in business and corporate management, gainfully engaged to ensure that the company's operations maintain sustainability of customer service and satisfaction.";
+
+export const team: TeamMember[] = [
+  {
+    slug: "david-olayinka-sokoya",
+    name: "David Olayinka Sokoya",
+    role: "Group Managing Director",
+    bio: "David Olayinka Olutayo Sokoya is currently serving as the Group Managing Director of Northfield Resource Management Limited. He holds a double degree in Estate Management and Law, is a member of several professional bodies, and has well over 17 years of professional and business experience.",
+    image: davidSokoya.url,
+    alt: "Portrait of David Olayinka Sokoya, Group Managing Director",
+  },
+  {
+    slug: "micheal-hovarth",
+    name: "Micheal Hovarth",
+    role: "Executive Director, International Operations",
+    bio: "A citizen and resident of the United States of America, Micheal handles business transactions across the USA and European countries. With BSc and MSc degrees in Economics and over 20 years of experience in exportation, he runs our international operations from our Florida office.",
+    image: michealHovarth.url,
+    alt: "Portrait of Micheal Hovarth, Executive Director of International Operations",
+  },
+  {
+    slug: "elizabeth-etete",
+    name: "Elizabeth Etete",
+    role: "Director",
+    bio: "Elizabeth holds a degree in Mechanical and Aerospace Engineering with over 25 years of experience in executive management and ten years in procurement. Versatile and widely travelled, she has lived across Africa, Europe and America and is fluent in German, English and French. She is a director at Northfield Resource Management Limited and MD of Crown Lotus Boutique Hotels.",
+    image: elizabethEtete.url,
+    alt: "Portrait of Elizabeth Etete, Director",
+  },
+  {
+    slug: "fatai-m-b-yusuf",
+    name: "Fatai M. B. Yusuf",
+    role: "General Manager, Administration",
+    bio: "A graduate of Urban and Regional Planning and a member of the Nigerian Institute of Management, Fatai is General Manager, Administration and also COO of Greg Foods and Farms Limited. He has served the company diligently since inception.",
+    image: fataiYusuf.url,
+    alt: "Portrait of Fatai M. B. Yusuf, General Manager of Administration",
+  },
+  {
+    slug: "dexter-martin-kackus",
+    name: "Dexter Martin Kackus",
+    role: "International Executive Director",
+    bio: "Resident in the United States of America, Dexter handles business transactions across the US and European countries covering crude oil, refineries, tanker vessels and international trading. He brings over 25 years of experience in Civil Engineering, AutoCAD, database and system administration, and runs international operations from our Florida office.",
+    image: dexterKackus.url,
+    alt: "Portrait of Dexter Martin Kackus, International Executive Director",
+  },
+];
