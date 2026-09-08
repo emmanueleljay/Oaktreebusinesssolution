@@ -346,6 +346,21 @@ export function Contact() {
               ))}
               <div className="sm:col-span-2">
                 <label
+                  htmlFor="service"
+                  className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground"
+                >
+                  Service Interested In
+                </label>
+                <select id="service" name="service" required className="field">
+                  {serviceOptions.map((option) => (
+                    <option key={option.value} value={option.value} disabled={!option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="sm:col-span-2">
+                <label
                   htmlFor="message"
                   className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground"
                 >
