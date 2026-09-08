@@ -24,7 +24,7 @@ export function PageHero({
   image: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink pb-16 pt-32 text-inverse sm:pb-24 sm:pt-40">
+    <section className="relative min-h-[320px] overflow-hidden bg-ink pb-20 pt-36 text-inverse sm:pb-28 sm:pt-44 lg:pt-48">
       <img
         src={image}
         alt=""
@@ -39,10 +39,10 @@ export function PageHero({
           <span className="h-px w-8 bg-primary" />
           {eyebrow}
         </p>
-        <h1 className="mt-5 max-w-3xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
+        <h1 className="mt-5 max-w-4xl font-display text-3xl font-bold leading-tight tracking-tight sm:text-5xl lg:max-w-5xl">
           {title}
         </h1>
-        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-inverse/75 sm:text-base">
+        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-inverse/75 sm:text-base lg:text-lg">
           {description}
         </p>
       </div>
