@@ -179,17 +179,28 @@ export const pillars = [
   },
 ] as const;
 
-export const navLinks = [
-  { label: "Home", to: "/" },
-  { label: "About Us", to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Our Activities", to: "/activities" },
-  { label: "Projects", to: "/projects" },
-  { label: "Team", to: "/team" },
-  { label: "Why Oaktree", to: "/why-oaktree" },
+export type NavLink = {
+  label: string;
+  to: string;
+  children?: { label: string; to: string }[];
+};
 
+export const navLinks: NavLink[] = [
+  { label: "Home", to: "/" },
+  {
+    label: "About Us",
+    to: "/about",
+    children: [
+      { label: "Team", to: "/team" },
+      { label: "Our Activities", to: "/activities" },
+      { label: "Why Oaktree", to: "/why-oaktree" },
+    ],
+  },
+  { label: "Services", to: "/services" },
+  { label: "Projects", to: "/projects" },
   { label: "Contact", to: "/contact" },
-] as const;
+];
+
 
 export const company = {
   name: "Oaktree Business Solutions",
