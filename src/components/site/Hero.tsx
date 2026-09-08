@@ -83,7 +83,7 @@ export function Hero() {
           <h1 className="mt-5 font-display text-[2.1rem] font-bold leading-[1.08] tracking-tight text-inverse sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
             {active.headline}
           </h1>
-          <p className="mt-5 max-w-2xl text-sm leading-relaxed text-inverse/80 sm:text-base lg:text-lg">
+          <p className="mt-5 max-w-3xl text-sm leading-relaxed text-inverse/80 sm:text-base lg:text-lg">
             {active.description}
           </p>
           <Link
