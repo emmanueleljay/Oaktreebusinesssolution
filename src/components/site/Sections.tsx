@@ -270,6 +270,11 @@ const fields = [
   { id: "subject", label: "Subject", type: "text", autoComplete: "off", required: true },
 ];
 
+const serviceOptions = [
+  { value: "", label: "Select a service" },
+  ...services.map((s) => ({ value: s.slug, label: s.title })),
+];
+
 export function Contact() {
   return (
     <section id="contact" className="bg-surface py-20 sm:py-28">
@@ -339,6 +344,21 @@ export function Contact() {
                   />
                 </div>
               ))}
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="service"
+                  className="mb-2 block text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground"
+                >
+                  Service Interested In
+                </label>
+                <select id="service" name="service" required className="field">
+                  {serviceOptions.map((option) => (
+                    <option key={option.value} value={option.value} disabled={!option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
