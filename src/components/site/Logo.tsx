@@ -1,10 +1,10 @@
-import logo from "@/assets/oaktree-logo-v2.png.asset.json";
+import logo from "@/assets/oaktree-logo-v2.png";
 import { cn } from "@/lib/utils";
 
 export function Logo({ className, invert = false }: { className?: string; invert?: boolean }) {
   return (
     <img
-      src={logo.url}
+      src={logo}
       alt="Oaktree Business Solutions logo"
       width={320}
       height={245}
