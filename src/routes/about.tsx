@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout, PageHero } from "@/components/site/Layout";
 import { About, CtaBand, WhyOaktree } from "@/components/site/Sections";
+import { CoreValues, MissionVision } from "@/components/site/MissionVision";
 import heroRealEstate from "@/assets/hero-real-estate.jpg";
+
 
 const title = "About Us | Oaktree Business Solutions";
 const description =
@@ -33,8 +35,11 @@ function AboutPage() {
         image={heroRealEstate}
       />
       <About />
+      <MissionVision />
+      <CoreValues />
       <WhyOaktree />
       <CtaBand />
+
     </Layout>
   );
 }
