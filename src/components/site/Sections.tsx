@@ -338,14 +338,14 @@ export function Contact() {
               <Phone className="mt-0.5 size-5 shrink-0 stroke-[1.5] text-primary-ink" />
               <span>
                 <strong className="block font-semibold">Phone</strong>
-                <span className="text-muted-foreground">Coming soon</span>
+                <span className="text-muted-foreground">+2348088819924</span>
               </span>
             </li>
             <li className="flex gap-4">
               <Mail className="mt-0.5 size-5 shrink-0 stroke-[1.5] text-primary-ink" />
               <span>
                 <strong className="block font-semibold">Email</strong>
-                <span className="text-muted-foreground">Coming soon</span>
+                <span className="text-muted-foreground">info@oaktreebusinesssolution.org</span>
               </span>
             </li>
             <li className="flex gap-4">
