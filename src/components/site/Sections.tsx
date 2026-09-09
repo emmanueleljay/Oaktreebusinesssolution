@@ -361,7 +361,7 @@ export function Contact() {
         <Reveal delay={100}>
           <form
             className="rounded-2xl border border-border bg-card p-6 sm:p-9"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
           >
             <div className="grid gap-5 sm:grid-cols-2">
               {fields.map((f) => (
@@ -407,10 +407,27 @@ export function Contact() {
                 <textarea id="message" name="message" rows={5} required className="field" />
               </div>
             </div>
-            <button type="submit" className="btn-lime mt-7 w-full justify-center sm:w-auto">
-              Send Message
+            <input type="hidden" name="botcheck" className="hidden" style={{ display: "none" }} />
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="btn-lime mt-7 w-full justify-center disabled:opacity-60 sm:w-auto"
+            >
+              {status === "sending" ? "Sending..." : "Send Message"}
               <ArrowRight className="size-4" />
             </button>
+            {feedback ? (
+              <p
+                role="status"
+                aria-live="polite"
+                className={
+                  "mt-4 text-sm " +
+                  (status === "error" ? "text-destructive" : "text-primary-ink")
+                }
+              >
+                {feedback}
+              </p>
+            ) : null}
           </form>
         </Reveal>
       </div>
