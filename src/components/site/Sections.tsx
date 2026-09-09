@@ -18,6 +18,7 @@ import {
   TrendingUp,
   type LucideIcon,
 } from "lucide-react";
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import aboutImage from "@/assets/about-oaktree.jpg";
 import { company, pillars, services } from "@/data/site";
@@ -275,7 +276,44 @@ const serviceOptions = [
   ...services.map((s) => ({ value: s.slug, label: s.title })),
 ];
 
+const WEB3FORMS_KEY = "a4b676e4-fbcd-447b-970d-c04b8982efde";
+
 export function Contact() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [feedback, setFeedback] = useState("");
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setStatus("sending");
+    setFeedback("");
+
+    try {
+      const formData = new FormData(form);
+      formData.append("access_key", WEB3FORMS_KEY);
+      formData.append("subject", String(formData.get("subject") ?? "New enquiry"));
+      formData.append("from_name", "Oaktree Business Solutions Website");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = (await response.json()) as { success?: boolean; message?: string };
+
+      if (response.ok && result.success) {
+        form.reset();
+        setStatus("sent");
+        setFeedback("Thank you — your message has been sent. We'll be in touch shortly.");
+      } else {
+        setStatus("error");
+        setFeedback(result.message ?? "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setFeedback("Network error. Please check your connection and try again.");
+    }
+  }
+
   return (
     <section id="contact" className="bg-surface py-20 sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-8">
