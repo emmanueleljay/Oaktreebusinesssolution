@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import aboutImage from "@/assets/about-oaktree.jpg";
+import aboutImage from "@/assets/about-board-meeting.jpg";
 import { company, pillars, services } from "@/data/site";
 import { Reveal } from "./Reveal";
 
